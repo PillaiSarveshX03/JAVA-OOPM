@@ -58,12 +58,12 @@ class AbstractAreaCalculator
 
         System.out.println("####### AREA CALCULATOR #######");
     
-        int input=1;
+        int input = 1;
 
         System.out.println();
         
         while(input !=0)
-        {
+        {    
     
             System.out.println("");
             
