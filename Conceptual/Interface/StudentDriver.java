@@ -1,4 +1,11 @@
-import java.util.Scanner;
+import java.util.BufferedReader;
+import java.io.*;
+
+
+interface test
+{
+
+}// END OF INTERFACE
 
 class Student
 {
@@ -65,24 +72,23 @@ class result extends test
 
 class StudentDriver 
 {
-    public static void main(String[] args) 
+    public static void main(String[] args) throws IOException
     {
-        Scanner sc= new Scanner(System.in);
+       BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
 
         String prn= "";
         float sem_1= 0;
         float sem_2= 0;
 
         System.out.print("Enter Your PRN : ");
-            prn = sc.nextLine();
+            prn = br.readLine();
 
         System.out.print("Enter Your Semester I Marks : ");
-            sem_1 =sc.nextFloat();
+            sem_1 = Float.parseFloat(br.readLine());
 
         System.out.print("Enter Your Semester II Marks : ");
-            sem_2 =sc.nextFloat();
-        
- 
+            sem_2 = Float.parseFloat(br.readLine());
+
     result r1 = new result(prn,sem_1,sem_2);
         
         System.out.println();
@@ -91,7 +97,7 @@ class StudentDriver
 
 
     
-        sc.close();
+        br.close();
 
     }// END OF MAIN
     
